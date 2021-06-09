@@ -1,0 +1,9 @@
+static void logicOp(boolean a, boolean b){
+
+        boolean res = a && b;
+        boolean res2 = a || b;
+        boolean res3 = (!a)&&(!b);
+        System.out.println((a && b) + " " + (a || b) + " " + ((!a)&&(!b)));
+        /*output (a&&b), (a||b), and ((!a)&&(!b))separated by spaces*/
+    
+    }
