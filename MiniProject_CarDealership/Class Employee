@@ -8,6 +8,8 @@ public class Employee {
 			processTransaction(cust, vehicle);
 		}else if(vehicle.getPrice() <= cust.getCashOnHand()) {
 			processTransaction(cust, vehicle);
+		}else {
+			System.out.println("customer needs more money :(");
 		}
 	}
 	public void runCreditHistory(Customer cust, double loanAmount) {
@@ -17,6 +19,6 @@ public class Employee {
 	}
 	
 	public void processTransaction(Customer cust, Vehicle vehicle) {
-		System.out.println("Customer :" + cust.getName() + " has successfully purchased " + vehicle.getName());
+		System.out.println("Customer:" + cust.getName() + " has successfully purchased " + vehicle);
 	}
 }
