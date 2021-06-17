@@ -4,16 +4,9 @@ public class Dealership {
 
 	public static void main(String[] args) {
 		
-		Customer cust1 = new Customer();
-		cust1.setName("Tom") ;
-		cust1.setAddress("Apt 123 Square Block, Hudson Street, NY - 10001");
-		cust1.setCashOnHand(12000);
+		Customer cust1 = new Customer("Tom", "Apt 123 Square Block, Hudson Street, NY - 10001",12000);
 		
-		Vehicle vehicle = new Vehicle();
-		vehicle.setMake("Honda");
-		vehicle.setModel("S-Series");
-		vehicle.setName("Honda civic");
-		vehicle.setPrice(15000);
+		Vehicle vehicle = new Vehicle("Honda","S-Series",15000,"Honda civic");
 		
 		Employee emp = new Employee();
 		
