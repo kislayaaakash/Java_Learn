@@ -6,6 +6,19 @@ public class Vehicle {
 	private double price;
 	private String name;
 	
+	public Vehicle(String make, String model, double price, String name) {
+		super();
+		this.make = make;
+		this.model = model;
+		this.price = price;
+		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return "Vehicle [make=" + make + ", model=" + model + ", price=" + price + ", name=" + name + "]";
+	}
+
 	public String getName() {
 		return name;
 	}
