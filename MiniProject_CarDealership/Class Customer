@@ -4,6 +4,13 @@ public class Customer {
 	private String name;
 	private String address;
 	private double cashOnHand;
+	
+	public Customer(String name, String address, double cashOnHand) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.cashOnHand = cashOnHand;
+	}
 
 	public String getName() {
 		return name;
