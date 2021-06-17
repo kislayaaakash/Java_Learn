@@ -1,0 +1,22 @@
+package car_dealership;
+
+public class Employee {
+	public void handleCustomer(Customer cust, boolean finance, Vehicle vehicle ) {
+		if(finance == true) {
+			double loanAmount = vehicle.getPrice() - cust.getCashOnHand();
+			runCreditHistory(cust, loanAmount);
+			processTransaction(cust, vehicle);
+		}else if(vehicle.getPrice() <= cust.getCashOnHand()) {
+			processTransaction(cust, vehicle);
+		}
+	}
+	public void runCreditHistory(Customer cust, double loanAmount) {
+		System.out.println("Ran credit history for customer:" + cust.getName() + 
+				". Loan amount requested:" + loanAmount);
+		System.out.println("Customer has been approved for loan :)");
+	}
+	
+	public void processTransaction(Customer cust, Vehicle vehicle) {
+		System.out.println("Customer :" + cust.getName() + " has successfully purchased " + vehicle.getName());
+	}
+}
