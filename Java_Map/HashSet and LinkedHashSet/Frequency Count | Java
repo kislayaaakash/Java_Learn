@@ -1,0 +1,18 @@
+public static ArrayList<Integer> frequencyCount(ArrayList<Integer>arr, int n)
+{
+    Map <Integer, Integer> mp = new LinkedHashMap<>();
+    for(int i = 0 ; i < n ; i++){
+        if(mp.containsKey(arr.get(i)))
+            mp.put(arr.get(i), mp.get(arr.get(i)) + 1);
+        else{
+            mp.put(arr.get(i), 1);
+        }
+    }
+    
+    ArrayList <Integer> array = new ArrayList<>();
+    int i = 0;
+    for(Map.Entry <Integer, Integer> entry: mp.entrySet()){
+        array.add(entry.getValue());
+    }
+    return array;
+}
