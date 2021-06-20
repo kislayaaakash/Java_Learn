@@ -1,0 +1,15 @@
+//Function to check whether there is a subarray present with 0-sum or not.
+    static boolean findsum(int arr[],int n)
+    {
+        Map <Integer,Integer> mp = new LinkedHashMap<>();
+        int sum = 0;
+        for(int i = 0 ; i < n ; i++){
+            sum = sum + arr[i];
+            if(mp.containsKey(sum) || sum == 0 || arr[i] == 0)
+                return true;
+            else
+                mp.put(sum,1);
+            
+        }
+        return false;
+    }
