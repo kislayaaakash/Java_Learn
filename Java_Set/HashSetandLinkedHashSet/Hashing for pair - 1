@@ -1,0 +1,14 @@
+//Function to check if there is a pair with the given sum in the array.
+    public static int sumExists(int arr[], int N, int sum)
+    {
+       HashSet <Integer> hs = new HashSet<Integer>();
+       for(int i =0; i < N; i++){
+           int comp = sum - arr[i];
+           
+           if(hs.contains(comp))
+            return 1;
+            
+           hs.add(arr[i]);
+       }
+       return 0;
+    }
