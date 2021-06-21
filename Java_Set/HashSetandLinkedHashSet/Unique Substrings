@@ -1,0 +1,10 @@
+ public static int unique_substring(String str)
+    {
+        HashSet<String> hs = new HashSet<String>();
+        for(int i = 0; i <= str.length() ; i++){
+            for(int j = i + 1; j <= str.length(); j++){
+                hs.add(str.substring(i,j));
+            }
+        }
+        return hs.size();
+    }
