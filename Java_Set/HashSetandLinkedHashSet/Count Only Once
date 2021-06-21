@@ -1,0 +1,8 @@
+public static int countOnce(ArrayList<Integer>arr)
+{
+    HashSet <Integer> hs = new HashSet<>();
+    for(int i = 0; i < arr.size();i++){
+        hs.add(arr.get(i));
+    }
+    return hs.size();
+}
