@@ -1,0 +1,31 @@
+//Function to return the count of the number of elements in
+    //the intersection of two arrays.
+    public static int NumberofElementsInIntersection(int a[],int b[],int n,int m)
+    {
+         int count = 0;
+        
+        HashSet <Integer> hs1 = new HashSet<>();
+        for(int i =0; i < n; i++){
+            hs1.add(a[i]);
+        }
+       
+        
+        HashSet <Integer> hs2 = new HashSet<>();
+        for(int i =0 ; i < m ; i++){
+            hs2.add(b[i]);
+        }
+        
+        if(n > m){
+            for(Integer i : hs1){
+                if(hs2.contains(i))
+                    count++;
+            }
+        }else{
+             for(Integer i : hs2){
+                if(hs1.contains(i))
+                    count++;
+            }
+        }
+        return count;
+        
+    }
