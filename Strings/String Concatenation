@@ -1,0 +1,8 @@
+public static String concatenateStrings(ArrayList<String>arr)
+{
+    String s = new String("");
+    for(int i =0; i < arr.size() ;i++ ){
+        s = s.concat(arr.get(i));
+    }
+    return s;
+}
