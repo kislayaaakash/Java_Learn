@@ -1,0 +1,9 @@
+//Function to check if two strings are rotations of each other or not.
+    public static boolean areRotations(String s1, String s2 )
+    {
+        String str = new String();
+        str = s1.concat(s1);
+        if(str.indexOf(s2) != -1 && s1.length() == s2.length()) 
+            return true;
+        return false;
+    }
