@@ -1,0 +1,23 @@
+public static Character oneExtraCharacter(String s1, String s2)
+{
+   String smallStr = new String();
+   String largeStr = new String();
+   if(s1.length() > s2.length()){
+       smallStr = s2;
+       largeStr = s1;
+   }else{
+       smallStr = s1;
+       largeStr = s2;
+   }
+   int i = 0;
+   int sumSmall = 0;
+   int sumLarge = 0;
+   for(i = 0; i < smallStr.length(); i++){
+       sumSmall  = sumSmall + (int)smallStr.charAt(i);
+       sumLarge  = sumLarge + (int)largeStr.charAt(i);
+   }
+   sumLarge  = sumLarge + (int)largeStr.charAt(i);
+   int dif = sumLarge - sumSmall;
+   return (char)dif;
+  
+}
