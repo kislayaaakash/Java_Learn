@@ -1,0 +1,8 @@
+public static ArrayList<Integer> fillArrayList(int arr[], int n)
+{
+    ArrayList<Integer> array = new ArrayList<>();
+    for(int i =0; i < n; i++){
+        array.add(arr[i]);
+    }
+    return array; 
+}
