@@ -1,0 +1,9 @@
+public static  ArrayList<Integer> getSmaller(ArrayList<Integer>arr,int k)
+{
+    ArrayList<Integer> array = new ArrayList<Integer>();
+    for(int i =0; i < arr.size();i++){
+        if(arr.get(i) < k)
+            array.add(arr.get(i));
+    }
+    return array;
+}
